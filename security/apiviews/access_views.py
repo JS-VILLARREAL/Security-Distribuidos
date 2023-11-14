@@ -1,9 +1,8 @@
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
-from django.contrib.auth import authenticate
 
-from ..models import User, Role, Module, View, UserRole, ModuleRole, ViewModule
+from ..models import User, Role, View, UserRole, ModuleRole, ViewModule
 from ..serializers.user import UserPublicSerializer
 
 class LoginViewsAPIView(APIView):
