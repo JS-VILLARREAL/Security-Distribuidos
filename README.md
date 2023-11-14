@@ -10,34 +10,38 @@ Asegúrate de tener instalado lo siguiente antes de comenzar:
 
 ## Configuración del Entorno
 
-1. Crea un entorno virtual:
+1. Clona el repositorio:
 
     ```bash
-    pip install
-    pipenv shell
+    git clone https://github.com/JS-VILLARREAL/Security-Distribuidos.git
     ```
 
-3. Instala las dependencias del proyecto:
+2. Crea un entorno virtual dentro de la carpeta ya clonada:
 
     ```bash
-    pipenv install -r requirements.txt
+    py -m venv venv
     ```
 
-4. Configura las variables de entorno:
+3. Entra al entorno virtual previamente creado:
 
     ```bash
-    cp .env.example .env
+    .venv\Script\activate
     ```
 
-    Ajusta las variables en el archivo `.env` según sea necesario.
+4. Instala las dependencias del proyecto:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 5. Realiza las migraciones de la base de datos:
 
     ```bash
-    python manage.py migrate
+    py manage.py makemigrations
+    py manage.py migrate
     ```
 
 ## Ejecutar el Proyecto
 
-```bash
+```shell
 py manage.py runserver
