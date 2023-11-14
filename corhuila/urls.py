@@ -22,23 +22,6 @@ from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from rest_framework import permissions
 
-# Autoload para los modulos en Apps
-# urlmodules = []
-# for mod in os.scandir(os.path.join(settings.BASE_DIR, 'apps')):
-#      if not mod.name.startswith('.') and not mod.name.startswith('_') and mod.is_dir():
-#         for entry in os.scandir(os.path.join(settings.BASE_DIR, 'apps', mod.name)):
-#             if entry.name == 'urls.py':
-#                 urlmodules.append(
-#                     path(
-#                         f'api/1.0/{mod.name}/',
-#                         include(f'apps.{mod.name}.urls'),
-#                     )
-#                 )
-#             if not entry.name.startswith('.') and not entry.name.startswith('_') and entry.is_dir():
-#                 url_file = f'apps.{mod.name}.{entry.name}.urls'
-#                 if os.path.exists(os.path.join(settings.BASE_DIR, url_file.replace('.', '/') + '.py')):
-#                     urlmodules.append(path(f'api/1.0/{mod.name}/', include(url_file)))
-
 schema_view = get_schema_view(
     openapi.Info(
         title="Snippets API",

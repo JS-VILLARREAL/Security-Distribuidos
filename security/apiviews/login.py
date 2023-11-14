@@ -13,16 +13,13 @@ class LoginAPIView(APIView):
         username = data.get('username')
         password = data.get('password')
 
-        # Si el usuario y la contraseña son válidos y el state del modelo User es activo osea true, devolver la siguiente información: [usuario, autorización = true].
         try:
             user = User.objects.get(username=username, password=password)
         except User.DoesNotExist:
             return Response({'message': 'Invalid credentials'}, status=400)
 
-        import pdb; pdb.set_trace()
         if user.state:
             serializer = UserPublicSerializer(user)
-
-            return Response({"User": serializer.data, "Authorization": True}, status=200)
+            return Response({'User': serializer.data, 'Authorization': True}, status=200)
         else:
             return Response({'message': 'Account is disabled'}, status=400)
