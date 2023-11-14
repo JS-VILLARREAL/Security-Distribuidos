@@ -34,7 +34,7 @@ Asegúrate de tener instalado lo siguiente antes de comenzar:
     pip install -r requirements.txt
     ```
 
-5. ### Configuración de la Base de Datos en la Carpeta Corhuila
+## Configuración de la Base de Datos en la Carpeta Corhuila
 
 Para configurar la base de datos en la carpeta `corhuila`, sigue estos pasos:
 
@@ -61,7 +61,8 @@ Recuerda proporcionar los detalles específicos de tu base de datos, como el nom
 
 ¡Listo! Has configurado la base de datos en la carpeta `corhuila`. Ahora puedes continuar con otros pasos de configuración según sea necesario.
 
-6. Realiza las migraciones de la base de datos:
+---
+5. Realiza las migraciones de la base de datos:
 
     ```bash
     py manage.py makemigrations
