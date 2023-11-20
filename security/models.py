@@ -16,7 +16,11 @@ class Person(BaseModel):
         ordering = ['first_name']
 
     def __str__(self):
-        return self.first_name
+        return "{0} {1}".format(self.first_name, self.second_name)
+
+    @property
+    def full_name(self):
+        return "{0} {1}".format(self.first_name, self.second_name)
 
 class User(BaseModel):
     username = models.CharField(max_length=50)

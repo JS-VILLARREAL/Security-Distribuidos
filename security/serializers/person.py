@@ -13,8 +13,7 @@ class PersonPublicSerializer(serializers.ModelSerializer):
         model = Person
         fields = (
             'id',
-            'first_name',
-            'second_name',
+            'full_name',
             'address',
             'phone',
             'mail',
