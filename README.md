@@ -71,5 +71,14 @@ Recuerda proporcionar los detalles específicos de tu base de datos, como el nom
 
 ## Ejecutar el Proyecto
 
+1. Ejecutar el servidor
+
 ```shell
 py manage.py runserver
+```
+
+2. Accede a la interfaz Swagger para explorar la API:
+
+    - Localmente: [http://127.0.0.1:8000/swagger/](http://127.0.0.1:8000/swagger/)
+
+    Swagger proporciona una interfaz interactiva que te permite probar y explorar fácilmente los puntos finales de la API. ¡Disfruta de tu experiencia con el proyecto de seguridad!
